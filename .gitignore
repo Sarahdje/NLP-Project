@@ -5,3 +5,9 @@ __pycache__/
 # Environment
 venv/
 .env
+
+# The data files madem daro mchkl? n7thm f git ignore, ila 7bito tbdloha n7iw stora brk
+data/
+
+# distilbert cs yhez bzef
+models/distilbert_finetuned

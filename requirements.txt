@@ -4,3 +4,6 @@ seaborn
 wordcloud
 nltk
 scikit-learn
+transformers
+torch
+accelerate
