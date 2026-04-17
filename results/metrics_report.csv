@@ -1,0 +1,2 @@
+model,dataset,train_size,epochs,accuracy,f1_macro,f1_weighted,f1_negative,f1_neutral,f1_positive
+DistilBERT,Hotel Reviews,200000,2,0.7179,0.6375,0.7296,0.52,0.58,0.82

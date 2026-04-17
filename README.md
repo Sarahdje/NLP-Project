@@ -9,3 +9,6 @@ Après téléchargement, placez les fichiers dans :
 - `data/raw/` → Hotel_Reviews.csv
 - `data/processed/` → clean_reviews.csv, train.csv, val.csv, test.csv
 - `data/vectorized/` → *.pkl
+
+Les fichiers de finetuned distilbert sont trop volumineux pour GitHub.
+Apres telechargement, placez les fichier dans models/distilbert_finetuned
