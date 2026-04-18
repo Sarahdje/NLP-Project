@@ -1,0 +1,56 @@
+--- Folder Layout ---
+[.git] (...)
+.gitignore
+app.py
+[data]
+    ├── [processed]
+        ├── clean_reviews.csv
+        ├── sample_clean.xlsx
+        ├── test.csv
+        ├── train.csv
+        └── val.csv
+    ├── [raw]
+        ├── Hotel_Reviews.csv
+        └── sample.xlsx
+    └── [vectorized]
+        ├── bert_splits.pkl
+        ├── bow_vectorizer.pkl
+        ├── tfidf_vectorizer.pkl
+        ├── X_test_bow.pkl
+        ├── X_test_tfidf.pkl
+        ├── X_train_bow.pkl
+        ├── X_train_tfidf.pkl
+        ├── X_val_bow.pkl
+        └── X_val_tfidf.pkl
+[models]
+    ├── [distilbert_finetuned] (...)
+    └── hotel_scores.csv
+[notebooks]
+    ├── 01_exploration.ipynb
+    ├── 02_preprocessing.ipynb
+    ├── 03_vectorization.ipynb
+    ├── 04_distilbert.ipynb
+    ├── 05_inference_kaggle.ipynb
+    ├── 05_recommendation.ipynb
+    ├── 06_rating_recomm.ipynb
+    └── 07_comparison.ipynb
+README.md
+requirements.txt
+[results]
+    ├── comparaison_systemes.csv
+    ├── hotel_reviews_with_predictions.csv
+    ├── hotel_scores.csv
+    ├── hotel_stats_ratings.csv
+    ├── metrics_report.csv
+    └── [visualizations]
+        ├── comparaison_classements.png
+        ├── confusion_matrix_distrilbert_finetuned.png
+        ├── loss_val_distilbert_finetuned.png
+        ├── rating_distribution.png
+        ├── recommandation_ratings.png
+        ├── review_length_distribution.png
+        ├── Rule-based_vs_DistilBERT.png
+        ├── sentiment_distribution.png
+        ├── test_set_results_distilbert_finetuned.png
+        ├── wordcloud_negative.png
+        └── wordcloud_positive.png
