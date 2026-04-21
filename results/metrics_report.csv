@@ -1,2 +1,2 @@
-model,dataset,train_size,epochs,accuracy,f1_macro,f1_weighted,f1_negative,f1_neutral,f1_positive
-DistilBERT,Hotel Reviews,200000,2,0.7179,0.6375,0.7296,0.52,0.58,0.82
+nb_hotels,spearman_rho,spearman_pval,div_mean,div_median,div_max,n_convergent_10pct,n_divergent_25pct
+1391,0.8459,0.0,0.1266,0.1028,0.5703,686,190
