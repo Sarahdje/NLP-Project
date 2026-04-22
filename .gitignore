@@ -11,3 +11,5 @@ data/
 
 # distilbert cs yhez bzef
 models/distilbert_finetuned
+
+project_layout.txt

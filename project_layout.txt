@@ -5,6 +5,7 @@ app.py
 [data]
     ├── [processed]
         ├── clean_reviews.csv
+        ├── hotel_reviews_with_predictions.csv
         ├── sample_clean.xlsx
         ├── test.csv
         ├── train.csv
@@ -23,17 +24,17 @@ app.py
         ├── X_val_bow.pkl
         └── X_val_tfidf.pkl
 [models]
-    ├── [distilbert_finetuned] (...)
-    └── hotel_scores.csv
+    └── [distilbert_finetuned] (...)
 [notebooks]
     ├── 01_exploration.ipynb
     ├── 02_preprocessing.ipynb
     ├── 03_vectorization.ipynb
-    ├── 04_distilbert.ipynb
-    ├── 05_inference_kaggle.ipynb
+    ├── 04-distilbert.ipynb
+    ├── 05-inference-kaggle-ipynb.ipynb
     ├── 05_recommendation.ipynb
     ├── 06_rating_recomm.ipynb
     └── 07_comparison.ipynb
+project_layout.txt
 README.md
 requirements.txt
 [results]
@@ -44,13 +45,18 @@ requirements.txt
     ├── metrics_report.csv
     └── [visualizations]
         ├── comparaison_classements.png
-        ├── confusion_matrix_distrilbert_finetuned.png
-        ├── loss_val_distilbert_finetuned.png
-        ├── rating_distribution.png
+        ├── confidence_by_hotel.png
+        ├── confidence_distribution.png
+        ├── confidence_distribution_full.png
+        ├── confusion_matrix_distilbert (1).png
+        ├── finetuning_results.png
         ├── recommandation_ratings.png
         ├── review_length_distribution.png
-        ├── Rule-based_vs_DistilBERT.png
         ├── sentiment_distribution.png
-        ├── test_set_results_distilbert_finetuned.png
+        ├── sentiment_score_distribution.png
+        ├── top15_sentiment.png
+        ├── training_curve_distilbert (1).png
         ├── wordcloud_negative.png
         └── wordcloud_positive.png
+[venv]
+    ...
