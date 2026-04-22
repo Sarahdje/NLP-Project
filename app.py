@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -669,21 +668,29 @@ with tab4:
     st.markdown("**Visualisations générées par les notebooks**")
     viz_base = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                             "results", "visualizations")
-    # Correction : noms de fichiers réels du projet (pas de _finetuned.png)
-    viz_files = {
-        "Matrice de confusion DistilBERT" : "confusion_matrix_distilbert (1).png",
-        "Courbes d'entraînement"          : "training_curve_distilbert (1).png",
-        "Résultats fine-tuning"           : "finetuning_results.png",
-        "Distribution sentiments"         : "sentiment_score_distribution.png",
-        "Top 15 sentiment"                : "top15_sentiment.png",
-        "Comparaison classements"         : "comparaison_classements.png",
-    }
+    import glob
+
+    viz_files = [
+        ("Matrice de confusion DistilBERT", "confusion_matrix_distilbert"),
+        ("Courbes d'entraînement",          "training_curve_distilbert"),
+        ("Distribution sentiments",         "sentiment_score_distribution"),
+        ("Top 15 sentiment",                "top15_sentiment"),
+        ("Confidence par hôtel",            "confidence_by_hotel"),
+        ("Distribution globale",            "confidence_distribution_full"),
+    ]
+
     cols_viz = st.columns(3)
-    for idx, (label, fname) in enumerate(viz_files.items()):
-        fpath = os.path.join(viz_base, fname)
+    for idx, (label, prefix) in enumerate(viz_files):
         with cols_viz[idx % 3]:
-            if os.path.exists(fpath):
-                st.image(fpath, caption=label, use_container_width=True)
+            matches = sorted(glob.glob(os.path.join(viz_base, prefix + "*.png")))
+            if matches:
+                img = plt.imread(matches[0])
+                fig_v, ax_v = plt.subplots()
+                ax_v.imshow(img)
+                ax_v.axis("off")
+                ax_v.set_title(label, fontsize=9)
+                st.pyplot(fig_v)
+                plt.close(fig_v)
             else:
                 st.markdown(
                     f"<small style='color:#aaa;'>📷 {label}<br><em>Non trouvée</em></small>",
